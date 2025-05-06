@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+/* common */
+body {
+  background: white;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 0px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+h3 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.btn {
+  display: inline-block;
+  background-color: green;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.container {
+  /* background-color: pink; */
+  max-width: 800px;
+  margin: 0 auto;
+  width: calc(100% - 32px);
+  box-sizing: border-box;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo-sp {
+  width: 116px;
+  height: 32px;
+}
+
+.logo-pc {
+  width: 284px;
+  height: 32px;
+  display: none;
+}
+
+/* hero */
+.hero {
+  background-color: skyblue;
+  background-image: url(bg.png);
+  background-repeat: repeat-x;
+  background-position: center bottom;
+
+  text-align: center;
+  padding-top: 64px;
+}
+
+.hero .btn {
+  margin-top: 64px;
+}
+
+.hero img {
+  width: 300px;
+  height: 312px;
+  margin-top: 64px;
+}
+
+/* contents */
+.features {
+  text-align: center;
+  padding: 64px 0;
+}
+
+.content {
+  margin-top: 64px;
+}
+
+.content img {
+  width: 300px;
+  height: 200px;
+}
+
+.content h3,
+.content p {
+  text-align: left;
+  margin-top: 16px;
+}
+
+/* footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 64px;
+  text-align: center;
+}
+
+small {
+  font-size: 14px;
+}
+
+/* large screen */
+@media (min-width: 600px) {
+  /* header */
+  .logo-sp {
+    display: none;
+  }
+  .logo-pc {
+    display: inline;
+  }
+
+  /* hero */
+  .hero .container{
+    display: flex;
+    align-items: center;
+  }
+
+  .hero .container div {
+    flex: 1;
+  }
+
+  .hero img {
+    margin: 0;
+  }
+
+  /* features */
+  .content {
+    display: flex;
+    gap: 32px;
+  }
+
+  .content_text {
+    flex: 1;
+  }
+
+  .reversed {
+    flex-direction: row-reverse;
+  }
+}
